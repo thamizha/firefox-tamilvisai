@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+  <Description about="urn:mozilla:install-manifest">
+    <em:id>{1426e5ba-006e-47f3-a26d-1d666d5bdc3a}</em:id>
+    <em:name>TamilKey</em:name>
+    <em:version>0.4.3</em:version>
+    <em:description>A utility for typing in Tamil language.</em:description>
+    <em:creator>Muguntharaj - Voice on Wings - Gopi</em:creator>
+    <!-- optional items -->
+    <em:contributor>Muguntharaj</em:contributor>
+    <em:contributor>Voice on Wings</em:contributor>
+    <em:contributor>Gopi</em:contributor>
+    <em:homepageURL>http://tamilkey.mozdev.org</em:homepageURL>
+    <em:iconURL>chrome://tamilkey/skin/icon.png</em:iconURL>
+    <em:optionsURL>chrome://tamilkey/content/settings.xul</em:optionsURL>
+    <!-- Firefox -->
+    <em:targetApplication>
+      <Description>
+        <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
+        <em:minVersion>1.5</em:minVersion>
+        <em:maxVersion>4.0.*</em:maxVersion>
+      </Description>
+    <!-- Mozilla Thunderbird -->
+    </em:targetApplication>
+        <em:targetApplication>
+	<Description>
+	   <em:id>{3550f703-e582-4d05-9a08-453d09bdfdc6}</em:id>
+	   <em:minVersion>1.5</em:minVersion>
+	   <em:maxVersion>3.0a1</em:maxVersion>
+	</Description>
+    </em:targetApplication>
+  </Description>
+</RDF>

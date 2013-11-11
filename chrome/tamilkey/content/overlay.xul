@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<overlay id="tamilkey-overlay"
+xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+<script type="application/x-javascript" src="chrome://tamilkey/content/englishkeys.js" />
+<script type="application/x-javascript" src="chrome://tamilkey/content/anjalkeys.js" />
+<script type="application/x-javascript" src="chrome://tamilkey/content/tamil99keys.js" />
+<script type="application/x-javascript" src="chrome://tamilkey/content/baminikeys.js" />
+<script type="application/x-javascript" src="chrome://tamilkey/content/oldtwkeys.js" />
+<script type="application/x-javascript" src="chrome://tamilkey/content/newtwkeys.js" />
+<script type="application/x-javascript" src="chrome://tamilkey/content/inscriptkeys.js" />
+<script type="application/x-javascript" src="chrome://tamilkey/content/avvaikeys.js" />
+<script type="application/x-javascript" src="chrome://tamilkey/content/settings.js" />
+<script type="application/x-javascript" src="chrome://tamilkey/content/converterlib.js" />
+<script type="application/x-javascript" >
+window.addEventListener('load', Tk_setAccessKeys, false);
+
+var Tk_appcontent = document.getElementById("appcontent"); //browser
+var Tk_messagepane = document.getElementById("messagepane");   //mail
+//Handle background loads in the browser
+if (Tk_appcontent)
+	Tk_appcontent.addEventListener("DOMContentLoaded", Tk_setDefaultKbrdMaps, false);
+if (Tk_messagepane)
+	Tk_messagepane.addEventListener("DOMContentLoaded", Tk_setDefaultKbrdMaps, false);
+</script>
+
+// This is for Firefox
+<keyset id="mainKeyset">
+<key id="anjal" keycode="VK_F8" modifiers="alt" oncommand="Tk_doFunc('anjal');"/>
+<key id="tamil99" keycode="VK_F9" modifiers="alt" oncommand="Tk_doFunc('tamil99');"/>
+<key id="bamini" keycode="VK_F10" modifiers="alt" oncommand="Tk_doFunc('bamini');"/>
+<key id="oldtw" keycode="VK_F11" modifiers="alt" oncommand="Tk_doFunc('oldtw');"/>
+<key id="newtw" keycode="VK_F12" modifiers="alt" oncommand="Tk_doFunc('newtw');"/>
+<key id="inscript" keycode="VK_F7" modifiers="alt" oncommand="Tk_doFunc('inscript');"/>
+<key id="avvai" keycode="VK_F6" modifiers="alt" oncommand="Tk_doFunc('avvai');"/>
+<key id="english" keycode="VK_F9" oncommand="Tk_doFunc('english');"/>
+</keyset>
+
+<popup id="contentAreaContextMenu">
+	<menu id="tamilkey_menu" label="&#2980;&#2990;&#3007;&#2996;&#3021;&#2997;&#3007;&#2970;&#3016;">
+    	<menupopup>
+    	<menuitem id="optkeys" label="&#2980;&#3014;&#2992;&#3007;&#2997;&#3009;&#2965;&#2995;&#3021;..."
+    	oncommand="window.open('chrome://tamilkey/content/settings.xul',
+                      '&#2980;&#3014;&#2992;&#3007;&#2997;&#3009;&#2965;&#2995;&#3021;',
+                      'chrome,centerscreen');" />
+    	<menuseparator/>
+      		<menuitem id="anjalkeys" label="&#2949;&#2974;&#3021;&#2970;&#2994;&#3021;" key="anjal" type="checkbox" oncommand="Tk_doFunc('anjal');"/>
+      		<menuitem id="tamil99keys" label="&#2980;&#2990;&#3007;&#2996;&#3021; 99" accesskey="9" key="tamil99" type="checkbox"  insertafter="anjalkeys" oncommand="Tk_doFunc('tamil99');"/>
+			<menuitem id="baminikeys" label="&#2986;&#3006;&#2990;&#3007;&#2985;&#3007;" key="bamini" type="checkbox"  insertafter="anjalkeys" oncommand="Tk_doFunc('bamini');"/>
+			<menuitem id="oldtwkeys" label="&#2986;&#2996;&#3016;&#2991; &#2980;&#2975;&#3021;&#2975;&#2970;&#3021;&#2970;&#3009;" key="oldtw" type="checkbox"  insertafter="baminikeys" oncommand="Tk_doFunc('oldtw');"/>
+			<menuitem id="newtwkeys" label="&#2986;&#3009;&#2980;&#3007;&#2991; &#2980;&#2975;&#3021;&#2975;&#2970;&#3021;&#2970;&#3009;" key="newtw" type="checkbox"  insertafter="oldtwkeys" oncommand="Tk_doFunc('newtw');"/>
+    		<menuitem id="inscriptkeys" label="&#2951;&#2985;&#3021;&#3000;&#3021;&#2965;&#3021;&#2992;&#3007;&#2986;&#3021;&#2975;&#3021;" key="inscript" type="checkbox" insertafter="newtwkeys" oncommand="Tk_doFunc('inscript');"/>
+    		<menuitem id="avvaikeys" label="&#2949;&#2997;&#3021;&#2997;&#3016;" key="avvai" type="checkbox" insertafter="inscriptkeys" oncommand="Tk_doFunc('avvai');"/>
+	  		<menuitem id="englishkeys" label="&#2950;&#2969;&#3021;&#2965;&#3007;&#2994;&#2990;&#3021;" key="english" type="checkbox" checked="true" insertafter="avvaikeys" oncommand="Tk_doFunc('english');"/>
+      </menupopup>
+	</menu>
+</popup>
+
+//This is for Thunderbird context menu
+<keyset id="editorKeys">
+<key id="anjal_tb" keycode="VK_F8" modifiers="alt" oncommand="Tk_doFunc('anjal');"/>
+<key id="tamil99_tb" keycode="VK_F9" modifiers="alt" oncommand="Tk_doFunc('tamil99');"/>
+<key id="bamini_tb" keycode="VK_F10" modifiers="alt" oncommand="Tk_doFunc('bamini');"/>
+<key id="oldtw_tb" keycode="VK_F11" modifiers="alt" oncommand="Tk_doFunc('oldtw');"/>
+<key id="newtw_tb" keycode="VK_F12" modifiers="alt" oncommand="Tk_doFunc('newtw');"/>
+<key id="inscript_tb" keycode="VK_F7" modifiers="alt" oncommand="Tk_doFunc('inscript');"/>
+<key id="avvai_tb" keycode="VK_F6" modifiers="alt" oncommand="Tk_doFunc('avvai');"/>
+<key id="english_tb" keycode="VK_F9" oncommand="Tk_doFunc('english');"/>
+</keyset>
+<popup id="msgComposeContext">
+	<menu id="tamilkey_menu_tb" label="&#2980;&#2990;&#3007;&#2996;&#3021;&#2997;&#3007;&#2970;&#3016;">
+    	<menupopup>
+    	<menuitem id="optkeys_tb" label="&#2980;&#3014;&#2992;&#3007;&#2997;&#3009;&#2965;&#2995;&#3021;..."
+    	oncommand="window.open('chrome://tamilkey/content/settings.xul',
+                      '&#2980;&#3014;&#2992;&#3007;&#2997;&#3009;&#2965;&#2995;&#3021;',
+                      'chrome,centerscreen');" />
+    	<menuseparator/>
+		<menuitem id="anjalkeys_tb" label="&#2949;&#2974;&#3021;&#2970;&#2994;&#3021;" key="anjal_tb" type="checkbox" oncommand="Tk_doFunc('anjal');"/>
+		<menuitem id="tamil99keys_tb" label="&#2980;&#2990;&#3007;&#2996;&#3021; 99" accesskey="9" key="tamil99_tb" type="checkbox" insertafter="anjalkeys_tb" oncommand="Tk_doFunc('tamil99');"/>
+		<menuitem id="baminikeys_tb" label="&#2986;&#3006;&#2990;&#3007;&#2985;&#3007;" key="bamini_tb" type="checkbox"  insertafter="anjalkeys_tb" oncommand="Tk_doFunc('bamini');"/>
+		<menuitem id="oldtwkeys_tb" label="&#2986;&#2996;&#3016;&#2991; &#2980;&#2975;&#3021;&#2975;&#2970;&#3021;&#2970;&#3009;" key="oldtw_tb" type="checkbox"  insertafter="baminikeys_tb" oncommand="Tk_doFunc('oldtw');"/>
+		<menuitem id="newtwkeys_tb" label="&#2986;&#3009;&#2980;&#3007;&#2991; &#2980;&#2975;&#3021;&#2975;&#2970;&#3021;&#2970;&#3009;" key="newtw_tb" type="checkbox"  insertafter="oldtwkeys_tb" oncommand="Tk_doFunc('newtw');"/>
+    	<menuitem id="inscriptkeys_tb" label="&#2951;&#2985;&#3021;&#3000;&#3021;&#2965;&#3021;&#2992;&#3007;&#2986;&#3021;&#2975;&#3021;" key="inscript_tb" type="checkbox" oncommand="Tk_doFunc('inscript');"/>
+    	<menuitem id="avvaikeys_tb" label="&#2949;&#2997;&#3021;&#2997;&#3016;" key="avvai_tb" type="checkbox" oncommand="Tk_doFunc('avvai');"/>
+		<menuitem id="englishkeys_tb" label="&#2950;&#2969;&#3021;&#2965;&#3007;&#2994;&#2990;&#3021;" key="english_tb" type="checkbox" checked="true" insertafter="avvaikeys_tb" oncommand="Tk_doFunc('english');"/>
+      </menupopup>
+	</menu>
+</popup>
+
+//This is for chatzilla
+<keyset id="chatzillaKeys">
+<key id="anjal_cz" keycode="VK_F8" modifiers="alt" oncommand="Tk_doFunc('anjal');"/>
+<key id="tamil99_cz" keycode="VK_F9" modifiers="alt" oncommand="Tk_doFunc('tamil99');"/>
+<key id="bamini_cz" keycode="VK_F10" modifiers="alt" oncommand="Tk_doFunc('bamini');"/>
+<key id="oldtw_cz" keycode="VK_F11" modifiers="alt" oncommand="Tk_doFunc('oldtw');"/>
+<key id="newtw_cz" keycode="VK_F12" modifiers="alt" oncommand="Tk_doFunc('newtw');"/>
+<key id="inscript_cz" keycode="VK_F7" modifiers="alt" oncommand="Tk_doFunc('inscript');"/>
+<key id="avvai_cz" keycode="VK_F6" modifiers="alt" oncommand="Tk_doFunc('avvai');"/>
+<key id="english_cz" keycode="VK_F9" oncommand="Tk_doFunc('english');"/>
+</keyset>
+
+</overlay>

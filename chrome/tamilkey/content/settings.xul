@@ -1,0 +1,223 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+	<prefwindow id="tamilkey-config"
+	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+	title="&#2980;&#2990;&#3007;&#2996;&#3021; &#2997;&#3007;&#2970;&#3016; &#2980;&#3014;&#2992;&#3007;&#2997;&#3009;&#2965;&#2995;&#3021;"
+	onload="Tk_populateURLList();sizeToContent();"
+	ondialogaccept="Tk_unloadAlert()">
+
+	    <script type="application/x-javascript" src="chrome://tamilkey/content/settings.js"/>
+      <prefpane id="tkHKeyOptions" label="&#2965;&#3009;&#2993;&#3009;&#2965;&#3021;&#2965;&#3009;&#2997;&#3007;&#2970;&#3016;&#2965;&#2995;&#3021;"
+      onpaneload="Tk_setHotKeyVals()">
+      		<preferences>
+      		<preference id="extensions.tamilkey.avvaishortcut"
+        		name="extensions.tamilkey.avvaishortcut" type="string"/>
+        	<preference id="extensions.tamilkey.anjalshortcut"
+        		name="extensions.tamilkey.anjalshortcut" type="string"/>
+        	<preference id="extensions.tamilkey.tamil99shortcut"
+        		name="extensions.tamilkey.tamil99shortcut" type="string"/>
+        	<preference id="extensions.tamilkey.baminishortcut"
+        		name="extensions.tamilkey.baminishortcut" type="string"/>
+        	<preference id="extensions.tamilkey.oldtwshortcut"
+        		name="extensions.tamilkey.oldtwshortcut" type="string"/>
+        	<preference id="extensions.tamilkey.newtwshortcut"
+        		name="extensions.tamilkey.newtwshortcut" type="string"/>
+        	<preference id="extensions.tamilkey.englishshortcut"
+        		name="extensions.tamilkey.englishshortcut" type="string"/>
+			<preference id="extensions.tamilkey.inscriptshortcut"
+        		name="extensions.tamilkey.inscriptshortcut" type="string"/>
+        	<preference id="extensions.tamilkey.showkbanjal"
+        		name="extensions.tamilkey.showkbanjal" type="bool"/>
+        	<preference id="extensions.tamilkey.showkbtamil99"
+        		name="extensions.tamilkey.showkbtamil99" type="bool"/>
+        	<preference id="extensions.tamilkey.showkbbamini"
+        		name="extensions.tamilkey.showkbbamini" type="bool"/>
+        	<preference id="extensions.tamilkey.showkboldtw"
+        		name="extensions.tamilkey.showkboldtw" type="bool"/>
+        	<preference id="extensions.tamilkey.showkbnewtw"
+        		name="extensions.tamilkey.showkbnewtw" type="bool"/>
+        	<preference id="extensions.tamilkey.showkbinscript"
+        		name="extensions.tamilkey.showkbinscript" type="bool"/>
+        	<preference id="extensions.tamilkey.showkbavvai"
+        		name="extensions.tamilkey.showkbavvai" type="bool"/>
+        	<preference id="extensions.tamilkey.showkbenglish"
+        		name="extensions.tamilkey.showkbenglish" type="bool"/>
+         	<preference id="extensions.tamilkey.selecturls"
+        		name="extensions.tamilkey.selecturls" type="string"/>
+		</preferences>
+
+      <groupbox>
+      <caption label="&#2965;&#3009;&#2993;&#3009;&#2965;&#3021;&#2965;&#3009;&#2997;&#3007;&#2970;&#3016; &#2980;&#3014;&#2992;&#3007;&#2997;&#3009;&#2965;&#2995;&#3021;"/>
+         <grid flex="1">
+         <columns><column flex="1"/><column flex="1" /><column flex="1" /></columns>
+         <rows>
+		  <row align="center">
+		  <label style="font-weight:bold" value="&#2997;&#3007;&#2970;&#3016;&#2986;&#3021;&#2986;&#2994;&#2965;&#3016;"/>
+		  <label style="font-weight:bold" value="&#2965;&#3009;&#2993;&#3009;&#2965;&#3021;&#2965;&#3009;&#2997;&#3007;&#2970;&#3016;"/>
+		  <label style="font-weight:bold" value=" "/>
+		  </row>
+		  <row align="center">
+		  <checkbox id="showkbanjal" label="&#2949;&#2974;&#3021;&#2970;&#2994;&#3021;"
+		   preference="extensions.tamilkey.showkbanjal"/>
+			<textbox id="anjalshortcut"
+				readonly="true"
+				style="width: 10em;"
+				preference="extensions.tamilkey.anjalshortcut"/>
+			<hbox flex="1">
+			<button label="&#2949;&#2990;&#3016;"
+				oncommand="Tk_setShortcut(anjalshortcut);"/>
+			<button label="&#2970;&#3008;&#2992;&#2990;&#3016;"
+				oncommand="Tk_clearShortcut(anjalshortcut);"/>
+			</hbox>
+		  </row>
+		   <row align="center">
+		   <checkbox id="showkbtamil99" label="&#2980;&#2990;&#3007;&#2996;&#3021; 99"
+		   preference="extensions.tamilkey.showkbtamil99"/>
+	      	<textbox id="tamil99shortcut"
+				readonly="true"
+				style="width: 10em;"
+				preference="extensions.tamilkey.tamil99shortcut"/>
+			<hbox flex="1">
+			<button label="&#2949;&#2990;&#3016;"
+				oncommand="Tk_setShortcut(tamil99shortcut);"/>
+			<button label="&#2970;&#3008;&#2992;&#2990;&#3016;"
+				oncommand="Tk_clearShortcut(tamil99shortcut);"/>
+			</hbox>
+		  </row>
+		  <row align="center">
+		  <checkbox id="showkbbamini" label="&#2986;&#3006;&#2990;&#3007;&#2985;&#3007;"
+		  preference="extensions.tamilkey.showkbbamini"/>
+	     	<textbox id="baminishortcut"
+				readonly="true"
+				style="width: 10em;"
+				preference="extensions.tamilkey.baminishortcut"/>
+			<hbox flex="1">
+			<button label="&#2949;&#2990;&#3016;"
+				oncommand="Tk_setShortcut(baminishortcut);"/>
+			<button label="&#2970;&#3008;&#2992;&#2990;&#3016;"
+				oncommand="Tk_clearShortcut(baminishortcut);"/>
+			</hbox>
+		  </row>
+		  <row align="center">
+		  <checkbox id="showkboldtw" label="&#2986;&#2996;&#3016;&#2991; &#2980;&#2975;&#3021;&#2975;&#2970;&#3021;&#2970;&#3009;"
+		  preference="extensions.tamilkey.showkboldtw"/>
+	      <textbox id="oldtwshortcut"
+				readonly="true"
+				style="width: 10em;"
+				preference="extensions.tamilkey.oldtwshortcut"/>
+			<hbox flex="1">
+			<button label="&#2949;&#2990;&#3016;"
+				oncommand="Tk_setShortcut(oldtwshortcut);"/>
+			<button label="&#2970;&#3008;&#2992;&#2990;&#3016;"
+				oncommand="Tk_clearShortcut(oldtwshortcut);"/>
+			</hbox>
+		 </row>
+		  <row align="center">
+		  <checkbox id="showkbnewtw" label="&#2986;&#3009;&#2980;&#3007;&#2991;   &#2980;&#2975;&#3021;&#2975;&#2970;&#3021;&#2970;&#3009;"
+		  preference="extensions.tamilkey.showkbnewtw"/>
+	      <textbox id="newtwshortcut"
+				readonly="true"
+				style="width: 10em;"
+				preference="extensions.tamilkey.newtwshortcut"/>
+			<hbox flex="1">
+			<button label="&#2949;&#2990;&#3016;"
+				oncommand="Tk_setShortcut(newtwshortcut);"/>
+			<button label="&#2970;&#3008;&#2992;&#2990;&#3016;"
+				oncommand="Tk_clearShortcut(newtwshortcut);"/>
+			</hbox>
+		  </row>
+		  <row align="center">
+		  <checkbox id="showkbinscript" label="&#2951;&#2985;&#3021;&#3000;&#3021;&#2965;&#3021;&#2992;&#3007;&#2986;&#3021;&#2975;&#3021;"
+		  preference="extensions.tamilkey.showkbinscript"/>
+			<textbox id="inscriptshortcut"
+				readonly="true"
+				style="width: 10em;"
+				preference="extensions.tamilkey.inscriptshortcut"/>
+			<hbox flex="1">
+			<button label="&#2949;&#2990;&#3016;"
+				oncommand="Tk_setShortcut(inscriptshortcut);"/>
+			<button label="&#2970;&#3008;&#2992;&#2990;&#3016;"
+				oncommand="Tk_clearShortcut(inscriptshortcut);"/>
+			</hbox>
+		  </row>
+ 		  <row align="center">
+		  <checkbox id="showkbavvai" label="&#2949;&#2997;&#3021;&#2997;&#3016;"
+		  preference="extensions.tamilkey.showkbavvai"/>
+			<textbox id="avvaishortcut"
+				readonly="true"
+				style="width: 10em;"
+				preference="extensions.tamilkey.avvaishortcut"/>
+			<hbox flex="1">
+			<button label="&#2949;&#2990;&#3016;"
+				oncommand="Tk_setShortcut(avvaishortcut);"/>
+			<button label="&#2970;&#3008;&#2992;&#2990;&#3016;"
+				oncommand="Tk_clearShortcut(avvaishortcut);"/>
+			</hbox>
+		  </row>
+		 <row align="center">
+		 <checkbox id="showkbenglish" label="&#2950;&#2969;&#3021;&#2965;&#3007;&#2994;&#2990;&#3021;"
+		 preference="extensions.tamilkey.showkbenglish"/>
+	      <textbox id="englishshortcut"
+				readonly="true"
+				style="width: 10em;"
+				preference="extensions.tamilkey.englishshortcut"/>
+			<hbox flex="1">
+			<button label="&#2949;&#2990;&#3016;"
+				oncommand="Tk_setShortcut(englishshortcut);"/>
+			<button label="&#2970;&#3008;&#2992;&#2990;&#3016;"
+				oncommand="Tk_clearShortcut(englishshortcut);"/>
+			</hbox>
+		</row></rows>
+		</grid>
+      </groupbox>
+	<groupbox id="selurlgrp">
+      <caption label="&#2997;&#2994;&#3016;&#2980;&#3021;&#2980;&#2995; &#2990;&#3009;&#2985;&#3021; &#2980;&#3014;&#2992;&#3007;&#2997;&#3009;&#2965;&#2995;&#3021;"/>
+       <columns><column flex="1" /></columns>
+       	<rows>
+       	<row align="center">
+       		<textbox id="selecturl" style="width: 25em;" value="" type="autocomplete" autocompletesearch="history" onkeypress='Tk_HandleEnterKey(event)'/>
+   			<menulist style="width: 12em;" label="&#2980;&#2990;&#3007;&#2996;&#3021; 99" id="selectkeybrd">
+			  <menupopup>
+			    <menuitem value="0" label="&#2949;&#2974;&#3021;&#2970;&#2994;&#3021;"/>
+			    <menuitem value="1" label="&#2980;&#2990;&#3007;&#2996;&#3021; 99" selected="true"/>
+			    <menuitem value="2" label="&#2986;&#3006;&#2990;&#3007;&#2985;&#3007;" />
+			    <menuitem value="3" label="&#2986;&#2996;&#3016;&#2991; &#2980;&#2975;&#3021;&#2975;&#2970;&#3021;&#2970;&#3009;"/>
+			    <menuitem value="4" label="&#2986;&#3009;&#2980;&#3007;&#2991;   &#2980;&#2975;&#3021;&#2975;&#2970;&#3021;&#2970;&#3009;"/>
+				<menuitem value="5" label="&#2951;&#2985;&#3021;&#3000;&#3021;&#2965;&#3021;&#2992;&#3007;&#2986;&#3021;&#2975;&#3021;"/>
+			    <menuitem value="6" label="&#2950;&#2969;&#3021;&#2965;&#3007;&#2994;&#2990;&#3021;"/>
+			  </menupopup>
+			</menulist>
+			<hbox>
+			<button label="&#2970;&#3015;&#2992;&#3021;"
+				oncommand="Tk_addURL(selectlist);" default="true"/>
+			<button label="&#2984;&#3008;&#2965;&#3021;&#2965;&#3009;"
+				oncommand="Tk_delURL(selectlist);"/>
+			</hbox>
+       	</row>
+       	<row>
+       	    <listbox flex="1" rows="5" id="selectlist"
+       	    onselect="Tk_edtURL(selectlist)" preference-editable="true" preference="extensions.tamilkey.selecturls"
+	               onsynctopreference="return saveSchedulesList();">
+       	      <listhead>
+    			<listheader style="width: 40em;" label="&#2997;&#2994;&#3016;&#2980;&#3021;&#2980;&#2995;&#2970;&#3021; &#2970;&#3009;&#2975;&#3021;&#2975;&#3007;"/>
+    			<listheader label="&#2997;&#3007;&#2970;&#3016;&#2986;&#3021;&#2986;&#2994;&#2965;&#3016;"/>
+  			  </listhead>
+       	      <listcols>
+    			<listcol/>
+    			<listcol/>
+  			  </listcols>
+		    </listbox>
+       	</row>
+       	<row>
+<label value="&#2986;&#3009;&#2980;&#3007;&#2980;&#3006;&#2991;&#3021; &#2980;&#2990;&#3007;&#2996;&#3021; &#2980;&#2975;&#3021;&#2975;&#2970;&#3021;&#2970;&#3009; &#2986;&#2996;&#2965;&#3009;&#2997;&#3019;&#2992;&#3021;&#2965;&#3021;&#2965;&#3009; "/>
+<label style="width:5em" class="text-link" href="http://www.tamil99.org/"
+	value="&#2980;&#2990;&#3007;&#2996;&#3021; 99 &#2997;&#3007;&#2970;&#3016;&#2986;&#3021;&#2986;&#2994;&#2965;&#3016;" />
+	<label value="&#2986;&#2992;&#3007;&#2984;&#3021;&#2980;&#3009;&#2992;&#3016;&#2965;&#3021;&#2965;&#2986;&#3021;&#2986;&#2975;&#3009;&#2965;&#3007;&#2993;&#2980;&#3009;&#46; "/>
+       	</row>
+       	</rows>
+    </groupbox>
+	<label id='dialogMessage' style="width:5em" value=""
+	dialogMessage="&#2980;&#3015;&#2997;&#3016;&#2991;&#3006;&#2985; &#2997;&#3007;&#2970;&#3016;&#2991;&#3016; &#2949;&#2996;&#3009;&#2980;&#3021;&#2980;&#2997;&#3009;&#2990;&#3021;"
+	dialogButton="&#2980;&#2997;&#3007;&#2992;&#3021;"/>
+    </prefpane>
+    </prefwindow>

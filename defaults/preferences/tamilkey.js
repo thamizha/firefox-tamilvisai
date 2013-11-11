@@ -1,0 +1,17 @@
+pref("extensions.tamilkey.avvaishortcut","Alt+F6");
+pref("extensions.tamilkey.inscriptshortcut","Alt+F7");
+pref("extensions.tamilkey.anjalshortcut","Alt+F8");
+pref("extensions.tamilkey.tamil99shortcut","Alt+F9");
+pref("extensions.tamilkey.baminishortcut","Alt+F10");
+pref("extensions.tamilkey.oldtwshortcut","Alt+F11");
+pref("extensions.tamilkey.newtwshortcut","Alt+F12");
+pref("extensions.tamilkey.englishshortcut","F9");
+pref("extensions.tamilkey.showkbanjal",true);
+pref("extensions.tamilkey.showkbtamil99",true);
+pref("extensions.tamilkey.showkbbamini",true);
+pref("extensions.tamilkey.showkboldtw",true);
+pref("extensions.tamilkey.showkbnewtw",true);
+pref("extensions.tamilkey.showkbinscript",true);
+pref("extensions.tamilkey.showkbavvai",true);
+pref("extensions.tamilkey.showkbenglish",true);
+pref("extensions.tamilkey.selecturls","");
