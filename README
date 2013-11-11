@@ -1,0 +1,61 @@
+This project is originally maintained at http://tamilkey.mozdev.org/ . The code is now moved to github and will be maintained in github going forward.
+
+The tamilkey is a keyboard extension for typing tamil in all mozilla products. Tamilkey will support most of the popular keyboard layouts used among tamils. currently tamilkey supports Anjal, Tamilnet99, Bamini, Old and New Tamil typewriter,Avvai keyboard layouts.
+
+This project is inspired by Telugutoolbar and Russkey. And basic codes for this project is derived from the above two projects. I thank the project owners of telugutoolbar and russkey for their contributions which has helped me to create tamilkey.
+
+Release Notes
+
+The latest release of Tamilkey is 0.4.3.
+Version 0.4.3
+
+    To work with Firefox 4.0
+
+Version 0.4.2
+
+    To work with Firefox 3.0
+
+Version 0.4.1
+
+    To work with Firefox 3.0b5pre
+
+Version 0.4.0
+
+    New Features in this version
+        Pre-selected website URLs
+        Visual changes for selected textbox
+        Inscript, Avvai layouts
+        Configurable Right click context menu
+    Bug fixes in this version
+        TamilVisai not working in Chatzilla
+        TamilVisai not working new GMail compose window
+        Tamil 99 rules 5,7,9,10,11 are not present
+        Tamil 99 special characters are not present
+        Tamil 99 Ayudam cannot be typed
+        In Anjal keyboard typing 'qpyarqpaakS' does not convert to firefox in tamil
+        Bamini/Old/New typewriters kombu, pulli related bugs
+        Bamini/Old/New typewriters canonical equivalence for Ogaram, Augaram related bug
+        Bamini/New typewriters otru next to augaram related bug
+        Bamini/New typewriter missing letters 
+
+Version 0.3.2
+
+    To work with Thunderbird 2.0
+
+Version 0.3.1
+
+    "Thunderbird Hot key" bug fix.
+
+Version 0.3.0
+
+    Bamini,Old/New Typewritter layouts
+
+Version 0.2.0
+
+    Entire revamp of code
+    Minor bug fixes
+
+Version 0.1.0
+
+    Initial Release
+    Anjal, Tamil99 layouts
